@@ -6,13 +6,13 @@
 * */
 
 //TASK 1: ********************************
-// Define small functions as defined in Task 1
+//small functions as defined in Task 1
 fun addTen(number: Int):
-        Int = number + 10 // Adds 10 to the number
+        Int = number + 10 //adds 10 to the number
 fun multiplyByThree(number: Int):
-        Int = number * 3 // Multiplies the number by 3
+        Int = number * 3 //multiplies the number by 3
 fun isGreaterThanFifty(number: Int):
-        Boolean = number > 50 // Returns true if the number is greater than 50
+        Boolean = number > 50 //returns true if the number is greater than 50
 
 //apply these functions to a list of numbers using a single variable
 val processNumber: (Int) -> Boolean = { isGreaterThanFifty(multiplyByThree(addTen(it))) }
@@ -24,13 +24,13 @@ fun calculateTotal(scores: List<Int>):
 
 //function to calculate the average using map and reduce
 fun calculateAverage(scores: List<Int>): Double {
-    val total = calculateTotal(scores) // Using the calculateTotal function to get the total
-    return total.toDouble() / scores.size // Returning the average
+    val total = calculateTotal(scores) //using the calculateTotal function to get the total
+    return total.toDouble() / scores.size //returning the average
 }
 
 //function to filter out failing scores using filter
 fun filterPassingScores(scores: List<Int>):
-        List<Int> = scores.filter { it >= 50 } // Filtering out scores less than 50
+        List<Int> = scores.filter { it >= 50 } //filtering out scores less than 50
 
 //TASK 3: ********************************
 //...
@@ -55,11 +55,11 @@ fun main() {
     //Original list of scores in Task 2
     val scores = listOf(45, 67, 89, 32, 56, 78, 90, 48)
 
-    // variables to perform the functions
+    //variables to perform the functions
     val average = calculateAverage(scores) //calculates average using function
     val passingScores = filterPassingScores(scores) //filters out failing scores using function
 
-    // Printing the results
+    //Print the results
     println("Average score: $average")
     println("Passing scores: $passingScores")
 
