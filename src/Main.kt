@@ -1,6 +1,6 @@
 /* Programming Languages - Assignment 2
 *  Ethan Curtis - 1166648
-*  ############ - #######
+*  Dilraj Singh Aujla - 1177128
 *
 * Practices Functional Programming in Kotlin
 * */
@@ -67,5 +67,14 @@ fun main() {
     println()
 
     //TASK 3: Main function ***************
+    val numbersList = listOf(1, 2, 3, 4, 5, 6)
+
+    // Calculate the square of each number using map
+    val squares = numbersList.map { it * it }
+
+    // Filter even numbers using filter
+    val evenSquares = squares.filter { it % 2 == 0 }
+
+    println("Even squares: $evenSquares")
 }
 
